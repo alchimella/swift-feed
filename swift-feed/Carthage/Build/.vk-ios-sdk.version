@@ -1,0 +1,17 @@
+{
+  "commitish" : "1.6.2",
+  "iOS" : [
+    {
+      "hash" : "43e4ca03bcddacbb2f2ce7bd5ad6655464a437d319accd80a54250e6d8648d95",
+      "name" : "VKSdkFramework",
+      "container" : "VKSdkFramework.xcframework",
+      "identifier" : "ios-arm64_i386_x86_64-simulator"
+    },
+    {
+      "hash" : "2d3ca5267135c98c461334628cfdf0296223a8966e6cc3df95d68929833c2e13",
+      "name" : "VKSdkFramework",
+      "container" : "VKSdkFramework.xcframework",
+      "identifier" : "ios-arm64_armv7"
+    }
+  ]
+}

@@ -15,7 +15,42 @@
 		624F47A9271FE51C006AB320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 624F47A7271FE51C006AB320 /* LaunchScreen.storyboard */; };
 		624F47B2272159E4006AB320 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47B1272159E4006AB320 /* Alamofire.framework */; };
 		624F47B3272159E4006AB320 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47B1272159E4006AB320 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		624F47CE272165DE006AB320 /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47CB27216556006AB320 /* VKSdkFramework.framework */; };
+		624F47CF272165DE006AB320 /* VKSdkFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47CB27216556006AB320 /* VKSdkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		624F47D5272168E1006AB320 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47D4272168E0006AB320 /* Kingfisher.framework */; };
+		624F47D6272168E1006AB320 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47D4272168E0006AB320 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		624F47C627216556006AB320 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 624F47BF27216556006AB320 /* VK-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3C7542D182133CC00964716;
+			remoteInfo = VKSdk;
+		};
+		624F47C827216556006AB320 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 624F47BF27216556006AB320 /* VK-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3BACC401865905B003158DA;
+			remoteInfo = VKSdkResources;
+		};
+		624F47CA27216556006AB320 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 624F47BF27216556006AB320 /* VK-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F34670311B8B7C5A003EF74B;
+			remoteInfo = VKSdkFramework;
+		};
+		624F47CC27216556006AB320 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 624F47BF27216556006AB320 /* VK-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3C58CCD1D213B2C005E94B5;
+			remoteInfo = VKSdkTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		624F47B4272159E4006AB320 /* Embed Frameworks */ = {
@@ -25,6 +60,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				624F47B3272159E4006AB320 /* Alamofire.framework in Embed Frameworks */,
+				624F47D6272168E1006AB320 /* Kingfisher.framework in Embed Frameworks */,
+				624F47CF272165DE006AB320 /* VKSdkFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,6 +78,8 @@
 		624F47A8271FE51C006AB320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		624F47AA271FE51C006AB320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		624F47B1272159E4006AB320 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		624F47BF27216556006AB320 /* VK-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "VK-ios-sdk.xcodeproj"; path = "Carthage/Checkouts/vk-ios-sdk/VK-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
+		624F47D4272168E0006AB320 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = "Carthage/Build/Kingfisher.xcframework/ios-arm64/Kingfisher.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +88,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				624F47B2272159E4006AB320 /* Alamofire.framework in Frameworks */,
+				624F47D5272168E1006AB320 /* Kingfisher.framework in Frameworks */,
+				624F47CE272165DE006AB320 /* VKSdkFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +126,8 @@
 		624F47B0272159E3006AB320 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				624F47D4272168E0006AB320 /* Kingfisher.framework */,
+				624F47BF27216556006AB320 /* VK-ios-sdk.xcodeproj */,
 				624F47B1272159E4006AB320 /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -166,6 +209,17 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		624F47C027216556006AB320 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				624F47C727216556006AB320 /* libVKSdk.a */,
+				624F47C927216556006AB320 /* VKSdkResources.bundle */,
+				624F47CB27216556006AB320 /* VKSdkFramework.framework */,
+				624F47CD27216556006AB320 /* VKSdkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,12 +267,49 @@
 			mainGroup = 624F4790271FE51A006AB320;
 			productRefGroup = 624F479A271FE51A006AB320 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 624F47C027216556006AB320 /* Products */;
+					ProjectRef = 624F47BF27216556006AB320 /* VK-ios-sdk.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				624F4798271FE51A006AB320 /* swift-feed */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		624F47C727216556006AB320 /* libVKSdk.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVKSdk.a;
+			remoteRef = 624F47C627216556006AB320 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		624F47C927216556006AB320 /* VKSdkResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = VKSdkResources.bundle;
+			remoteRef = 624F47C827216556006AB320 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		624F47CB27216556006AB320 /* VKSdkFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VKSdkFramework.framework;
+			remoteRef = 624F47CA27216556006AB320 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		624F47CD27216556006AB320 /* VKSdkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = VKSdkTests.xctest;
+			remoteRef = 624F47CC27216556006AB320 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		624F4797271FE51A006AB320 /* Resources */ = {
@@ -413,6 +504,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Kingfisher.xcframework/ios-arm64",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/swift-feed/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -436,6 +528,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Kingfisher.xcframework/ios-arm64",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/swift-feed/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

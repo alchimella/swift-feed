@@ -10,7 +10,7 @@
     },
     {
       "swiftToolchainVersion" : "5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)",
-      "hash" : "0177843951880e190a710449d8684233e894cdfebc784a4da79a108a8a2db78c",
+      "hash" : "51c60c9c2f61e57a46a06e771ef8fc0e38ecb24a38352097f2fe57328b74b740",
       "name" : "Alamofire",
       "container" : "Alamofire.xcframework",
       "identifier" : "ios-arm64_armv7"
