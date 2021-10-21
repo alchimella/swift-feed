@@ -13,7 +13,23 @@
 		624F47A4271FE51A006AB320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 624F47A2271FE51A006AB320 /* Main.storyboard */; };
 		624F47A6271FE51C006AB320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 624F47A5271FE51C006AB320 /* Assets.xcassets */; };
 		624F47A9271FE51C006AB320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 624F47A7271FE51C006AB320 /* LaunchScreen.storyboard */; };
+		624F47B2272159E4006AB320 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47B1272159E4006AB320 /* Alamofire.framework */; };
+		624F47B3272159E4006AB320 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47B1272159E4006AB320 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		624F47B4272159E4006AB320 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				624F47B3272159E4006AB320 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		624F4799271FE51A006AB320 /* swift-feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-feed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +40,7 @@
 		624F47A5271FE51C006AB320 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		624F47A8271FE51C006AB320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		624F47AA271FE51C006AB320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		624F47B1272159E4006AB320 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				624F47B2272159E4006AB320 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 			children = (
 				624F479B271FE51A006AB320 /* swift-feed */,
 				624F479A271FE51A006AB320 /* Products */,
+				624F47B0272159E3006AB320 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +86,14 @@
 			path = "swift-feed";
 			sourceTree = "<group>";
 		};
+		624F47B0272159E3006AB320 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				624F47B1272159E4006AB320 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +104,8 @@
 				624F4795271FE51A006AB320 /* Sources */,
 				624F4796271FE51A006AB320 /* Frameworks */,
 				624F4797271FE51A006AB320 /* Resources */,
+				624F47B4272159E4006AB320 /* Embed Frameworks */,
+				624F47B527215A09006AB320 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -131,6 +160,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		624F47B527215A09006AB320 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		624F4795271FE51A006AB320 /* Sources */ = {
@@ -288,6 +338,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SKYF4SX75K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "swift-feed/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,6 +361,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SKYF4SX75K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "swift-feed/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
