@@ -6,9 +6,7 @@
 //
 
 import UIKit
-import Alamofire
 import VKSdkFramework
-import Kingfisher
 
 class FeedViewController: UIViewController {
 
