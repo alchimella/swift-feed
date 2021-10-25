@@ -9,10 +9,18 @@ import UIKit
 import VKSdkFramework
 
 class FeedViewController: UIViewController {
+    
+    private let fetcher: DataFetcher = NetworkDataFetcher(networking: NetworkService())
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        fetcher.getFeed { feedResponse in
+            guard let feedResponse = feedResponse else { return }
+            feedResponse.items.map { item in
+                print(item.date)
+            }
+        }
     }
 
 

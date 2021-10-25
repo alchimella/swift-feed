@@ -13,15 +13,18 @@
 		624F47A4271FE51A006AB320 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 624F47A2271FE51A006AB320 /* Feed.storyboard */; };
 		624F47A6271FE51C006AB320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 624F47A5271FE51C006AB320 /* Assets.xcassets */; };
 		624F47A9271FE51C006AB320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 624F47A7271FE51C006AB320 /* LaunchScreen.storyboard */; };
-		624F47B2272159E4006AB320 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47B1272159E4006AB320 /* Alamofire.framework */; };
-		624F47B3272159E4006AB320 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47B1272159E4006AB320 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		624F47D5272168E1006AB320 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47D4272168E0006AB320 /* Kingfisher.framework */; };
 		624F47D6272168E1006AB320 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47D4272168E0006AB320 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		624F47DC27256EA0006AB320 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 624F47DB27256EA0006AB320 /* Auth.storyboard */; };
 		624F47DE27256EB6006AB320 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F47DD27256EB6006AB320 /* AuthViewController.swift */; };
 		624F47E027256EC8006AB320 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F47DF27256EC8006AB320 /* AuthModel.swift */; };
 		624F47E327257198006AB320 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F47E227257198006AB320 /* AuthService.swift */; };
-		624F47EB2725894F006AB320 /* VKSdkFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47EA2725894F006AB320 /* VKSdkFramework.xcframework */; };
+		624F47ED2725BFA0006AB320 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F47EC2725BF9F006AB320 /* NetworkService.swift */; };
+		624F47EF2725C0B0006AB320 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F47EE2725C0B0006AB320 /* API.swift */; };
+		624F47F0272677F6006AB320 /* VKSdkFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47EA2725894F006AB320 /* VKSdkFramework.xcframework */; };
+		624F47F1272677F6006AB320 /* VKSdkFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47EA2725894F006AB320 /* VKSdkFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		624F47F327267F3A006AB320 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F47F227267F3A006AB320 /* FeedModel.swift */; };
+		624F47F52726819D006AB320 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F47F42726819D006AB320 /* NetworkDataFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,7 +34,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				624F47B3272159E4006AB320 /* Alamofire.framework in Embed Frameworks */,
+				624F47F1272677F6006AB320 /* VKSdkFramework.xcframework in Embed Frameworks */,
 				624F47D6272168E1006AB320 /* Kingfisher.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -55,6 +58,10 @@
 		624F47DF27256EC8006AB320 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		624F47E227257198006AB320 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		624F47EA2725894F006AB320 /* VKSdkFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VKSdkFramework.xcframework; path = Carthage/Build/VKSdkFramework.xcframework; sourceTree = "<group>"; };
+		624F47EC2725BF9F006AB320 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		624F47EE2725C0B0006AB320 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		624F47F227267F3A006AB320 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		624F47F42726819D006AB320 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				624F47B2272159E4006AB320 /* Alamofire.framework in Frameworks */,
+				624F47F0272677F6006AB320 /* VKSdkFramework.xcframework in Frameworks */,
 				624F47D5272168E1006AB320 /* Kingfisher.framework in Frameworks */,
-				624F47EB2725894F006AB320 /* VKSdkFramework.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +179,7 @@
 		624F47BD27215EA3006AB320 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				624F47F227267F3A006AB320 /* FeedModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,6 +231,9 @@
 			isa = PBXGroup;
 			children = (
 				624F47E227257198006AB320 /* AuthService.swift */,
+				624F47EC2725BF9F006AB320 /* NetworkService.swift */,
+				624F47EE2725C0B0006AB320 /* API.swift */,
+				624F47F42726819D006AB320 /* NetworkDataFetcher.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -305,8 +315,6 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/VKSdkFramework.xcframework/ios-arm64_armv7/VKSdkFramework.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -324,11 +332,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				624F47DE27256EB6006AB320 /* AuthViewController.swift in Sources */,
+				624F47F327267F3A006AB320 /* FeedModel.swift in Sources */,
 				624F47A1271FE51A006AB320 /* FeedViewController.swift in Sources */,
 				624F479D271FE51A006AB320 /* AppDelegate.swift in Sources */,
+				624F47F52726819D006AB320 /* NetworkDataFetcher.swift in Sources */,
 				624F47E327257198006AB320 /* AuthService.swift in Sources */,
 				624F479F271FE51A006AB320 /* SceneDelegate.swift in Sources */,
 				624F47E027256EC8006AB320 /* AuthModel.swift in Sources */,
+				624F47EF2725C0B0006AB320 /* API.swift in Sources */,
+				624F47ED2725BFA0006AB320 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
