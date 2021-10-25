@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol Networking {
-    func request(path: String, params: [String: String], complition: @escaping (Data?, Error?) -> Void)
+    func request(path: String, params: [String: String], complition: @escaping (FeedResponseWrapped?, Error?) -> Void)
 }
 
 class NetworkService: Networking {
@@ -31,7 +32,7 @@ class NetworkService: Networking {
         return components.url!
     }
     
-    func request(path: String, params: [String : String], complition: @escaping (Data?, Error?) -> Void) {
+    func request(path: String, params: [String : String], complition: @escaping (FeedResponseWrapped?, Error?) -> Void) {
         guard let token = authService.token else { return }
                 
         var allParams = params
@@ -41,18 +42,35 @@ class NetworkService: Networking {
         let url = self.url(from: path, params: allParams)
         
         print("URL", url)
-        
-        let request = URLRequest(url: url)
+        let request = AF.request(url)
+//        let request = URLRequest(url: url)
         let task = createDataTask(from: request, complition: complition)
         
         task.resume()
     }
     
-    private func createDataTask(from request: URLRequest, complition: @escaping (Data?, Error?) -> Void) -> URLSessionDataTask {
-        return URLSession.shared.dataTask(with: request) { data, response, error in
+    private func createDataTask(from request: DataRequest, complition: @escaping (FeedResponseWrapped?, Error?) -> Void) -> DataRequest {
+        
+        request.validate()
+        
+        return request.responseDecodable { (response: DataResponse<FeedResponseWrapped, AFError>) in
             DispatchQueue.main.async {
-                complition(data, error)
+                print("ERROR", response.error)
+                print("RESPONSE", response.value?.response.items)
+                complition(response.value, response.error)
             }
         }
+        
+//        return request.responseDecodable(of: FeedResponseWrapped.self) { [weak self] response, error in
+//            DispatchQueue.main.async {
+//                print("RESPONSE", response.value?.response.items)
+//                complition(response.value?.response, <#Error?#>)
+//            }
+//        }
+//        return URLSession.shared.dataTask(with: request) { data, response, error in
+//            DispatchQueue.main.async {
+//                complition(data, error)
+//            }
+//        }
     }
 }

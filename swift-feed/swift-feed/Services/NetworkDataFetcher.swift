@@ -27,24 +27,24 @@ struct NetworkDataFetcher: DataFetcher {
                 response(nil)
             }
             
-            let decoded = decodeJSON(type: FeedResponseWrapped.self, from: data)
-            response(decoded?.response)
+//            let decoded = decodeJSON(type: FeedResponseWrapped.self, from: data)
+            response(data?.response)
         }
     }
     
-    private func decodeJSON<T: Decodable>(type: T.Type, from: Data?) -> T? {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        
-        guard let data = from else { return nil }
-        
-        do {
-            let response = try decoder.decode(type.self, from: data)
-            print("RESPONSE", response)
-            return response
-        } catch let error {
-            print("SOME ERROR", error.localizedDescription)
-            return nil
-        }
-    }
+//    private func decodeJSON<T: Decodable>(type: T.Type, from: FeedResponseWrapped?) -> T? {
+//        let decoder = JSONDecoder()
+//        decoder.keyDecodingStrategy = .convertFromSnakeCase
+//
+//        guard let data = from else { return nil }
+//
+//        do {
+//            let response = try decoder.decode(type.self, from: data)
+//            print("RESPONSE", response)
+//            return response
+//        } catch let error {
+//            print("SOME ERROR", error.localizedDescription)
+//            return nil
+//        }
+//    }
 }

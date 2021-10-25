@@ -25,6 +25,8 @@
 		624F47F1272677F6006AB320 /* VKSdkFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47EA2725894F006AB320 /* VKSdkFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		624F47F327267F3A006AB320 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F47F227267F3A006AB320 /* FeedModel.swift */; };
 		624F47F52726819D006AB320 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F47F42726819D006AB320 /* NetworkDataFetcher.swift */; };
+		624F47F62726A0A1006AB320 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47B1272159E4006AB320 /* Alamofire.framework */; };
+		624F47F72726A0A1006AB320 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 624F47B1272159E4006AB320 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				624F47F1272677F6006AB320 /* VKSdkFramework.xcframework in Embed Frameworks */,
+				624F47F72726A0A1006AB320 /* Alamofire.framework in Embed Frameworks */,
 				624F47D6272168E1006AB320 /* Kingfisher.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -70,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				624F47F0272677F6006AB320 /* VKSdkFramework.xcframework in Frameworks */,
+				624F47F62726A0A1006AB320 /* Alamofire.framework in Frameworks */,
 				624F47D5272168E1006AB320 /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

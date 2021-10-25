@@ -18,7 +18,7 @@ class FeedViewController: UIViewController {
         fetcher.getFeed { feedResponse in
             guard let feedResponse = feedResponse else { return }
             feedResponse.items.map { item in
-                print(item.date)
+                print("READY FOR WORK", item.date)
             }
         }
     }
